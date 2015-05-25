@@ -1,0 +1,35 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "[axillarybud.com](http://axillarybud.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axillarybud/landing-page.git"
+  },
+  "author": "Adam Hull <adam@hmlad.com>",
+  "license": "private",
+  "bugs": {
+    "url": "https://github.com/axillarybud/landing-page/issues"
+  },
+  "homepage": "https://github.com/axillarybud/landing-page",
+  "devDependencies": {
+    "connect": "^3.3.5",
+    "convict": "^0.7.0",
+    "este-watch": "^0.1.1",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "metalsmith": "^1.7.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-markdown": "^0.2.1",
+    "open": "0.0.5",
+    "port-fallback": "^1.0.0",
+    "serve-static": "^1.9.3"
+  },
+  "dependencies": {
+    "del": "^1.2.0"
+  }
+}
