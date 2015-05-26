@@ -1,7 +1,7 @@
 # Axillary Bud
 [axillarybud.com](http://axillarybud.com)
 
-[![Build Status](http://img.shields.io/travis/axillarybud/landing-pag.svg?style=flat-square)](https://travis-ci.org/auxillarybud/landing-page)
+[![Build Status](http://img.shields.io/travis/axillarybud/landing-page.svg?style=flat-square)](https://travis-ci.org/axillarybud/landing-page)
 
 Getting Started
 ---------------
