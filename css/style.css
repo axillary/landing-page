@@ -1,0 +1,51 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+#index-banner {
+  background-image: url('/img/bud-splash.jpg');
+  background-size: cover;
+  text-shadow: 0 0 35px yellow;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 2rem 0 0.5rem 0
+}
+
+.logo-text {
+  font-family: 'Lily Script One', cursive !important;
+}
+
+/* input underline color */
+.input-field input[type=email] {
+  border-bottom: 1px solid #FFF;
+  /*box-shadow: 0 1px 0 0 #000;*/
+}
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #FFF;
+  box-shadow: 0 1px 0 0 #FFF;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+:-ms-input-placeholder {
+   color: white;
+}
+
+#mc-embedded-subscribe {
+  margin: 10px 0;
+}
