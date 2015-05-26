@@ -23,7 +23,9 @@
     "convict": "^0.7.0",
     "este-watch": "^0.1.1",
     "extend": "^2.0.1",
+    "gift": "^0.6.0",
     "gulp": "^3.8.11",
+    "gulp-gh-pages": "^0.5.1",
     "gulp-util": "^3.0.4",
     "metalsmith": "^1.7.0",
     "metalsmith-assets": "^0.1.0",
@@ -34,6 +36,7 @@
     "process-logger": "^0.1.0",
     "serve-static": "^1.9.3",
     "simplecrawler": "^0.5.2",
+    "stream-end": "^0.1.0",
     "wd": "^0.3.11"
   },
   "dependencies": {

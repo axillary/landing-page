@@ -107,5 +107,5 @@ release = ({push}={}) ->
 
 gulp.task 'stage', ['build'], release push: false
 
-gulp.task 'publish', ['clean', 'nochanges', 'build', 'spec'], release push: true
+gulp.task 'publish', ['clean', 'nochanges', 'build', 'test'], release push: true
 
