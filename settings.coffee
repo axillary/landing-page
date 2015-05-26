@@ -10,7 +10,7 @@ conf = convict
   seleniumServer:
     port:
       format: 'port'
-      default: 4444
+      default: 9515
       env: 'SELENIUM_SERVER_PORT'
 
   browser:

@@ -4,7 +4,7 @@
   "description": "[axillarybud.com](http://axillarybud.com)",
   "main": "index.js",
   "scripts": {
-    "test": "gulp spec"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -17,17 +17,24 @@
   },
   "homepage": "https://github.com/axillarybud/landing-page",
   "devDependencies": {
+    "chai": "^2.3.0",
+    "chai-as-promised": "^5.0.0",
     "connect": "^3.3.5",
     "convict": "^0.7.0",
     "este-watch": "^0.1.1",
+    "extend": "^2.0.1",
     "gulp": "^3.8.11",
     "gulp-util": "^3.0.4",
     "metalsmith": "^1.7.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-markdown": "^0.2.1",
+    "mocha": "^2.2.5",
     "open": "0.0.5",
     "port-fallback": "^1.0.0",
-    "serve-static": "^1.9.3"
+    "process-logger": "^0.1.0",
+    "serve-static": "^1.9.3",
+    "simplecrawler": "^0.5.2",
+    "wd": "^0.3.11"
   },
   "dependencies": {
     "del": "^1.2.0"

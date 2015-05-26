@@ -12,7 +12,6 @@ gulp.task 'build', ['metalsmith']
 
 servers =
   dev: null
-  selenium: null
 
 gulp.task 'serve:dev', (done) ->
   connect = require 'connect'
@@ -32,26 +31,6 @@ gulp.task 'serve:dev', (done) ->
       done()
   servers.dev = server
 
-gulp.task 'serve:selenium', ->
-  selenium = require 'selenium-standalone'
-  tcpPort = require 'tcp-port-used'
-  logProcess = require 'process-logger'
-
-  server = selenium
-    stdio: settings.verbose and 'pipe' or 'ignore'
-    ['-port', settings.seleniumServer.port]
-
-  if settings.verbose
-    logProcess server, prefix: '[selenium-server]'
-
-  # Don't hold gulp open
-  [server, server.stdin, server.stdout, server.stderr]
-    .filter Boolean
-    .map (s) -> s.unref()
-
-  servers.selenium = server
-  return tcpPort.waitUntilUsed(settings.seleniumServer.port, 500, 20000)
-
 gulp.task 'crawl', ['build', 'serve:dev'], (done) ->
   Crawler = require 'simplecrawler'
   referrers = {}
@@ -66,7 +45,7 @@ gulp.task 'crawl', ['build', 'serve:dev'], (done) ->
     .on 'complete', done
   crawler.timeout = 2000
 
-gulp.task 'mocha', ['build', 'serve:dev', 'serve:selenium'], (done) ->
+gulp.task 'mocha', ['build', 'serve:dev'], (done) ->
   {spawn} = require 'child_process'
   logProcess = require 'process-logger'
   extend = require 'extend'
@@ -74,16 +53,15 @@ gulp.task 'mocha', ['build', 'serve:dev', 'serve:selenium'], (done) ->
   mocha = spawn 'mocha', [
     '--compilers', 'coffee:coffee-script/register'
     '--reporter', 'spec'
-    '--ui', 'mocha-fibers'
     '--timeout', 10000
-    'spec/*.spec.coffee'
+    'test/*.test.coffee'
   ], env: extend({}, process.env, PORT: settings.port)
   .on 'exit', (code) -> done code or null
 
   logProcess mocha, prefix: settings.verbose and '[mocha]' or ''
   return null # don't return a stream
 
-gulp.task 'spec', ['crawl', 'mocha']
+gulp.task 'test', ['crawl', 'mocha']
 
 gulp.task 'watch', ->
   watch = require 'este-watch'
