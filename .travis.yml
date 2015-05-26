@@ -4,4 +4,5 @@ node_js:
 env:
   - BROWSER=phantomjs SELENIUM_SERVER_PORT=8910
 before_script:
-  - phantomjs --webdriver=8910
+  - phantomjs --webdriver=8910 &
+  - sleep 3 # give phantom some time to start
