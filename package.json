@@ -19,6 +19,7 @@
   "devDependencies": {
     "chai": "^2.3.0",
     "chai-as-promised": "^5.0.0",
+    "coffee-script": "^1.9.2",
     "connect": "^3.3.5",
     "convict": "^0.7.0",
     "este-watch": "^0.1.1",
